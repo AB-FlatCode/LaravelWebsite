@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,5 @@ Route::put('/category/update/{id}', [CategoryController::class, 'updateCategory'
 Route::get('/category/softdelete/{id}', [CategoryController::class, 'SoftDeleteCategory',])->name('softdelete.category');
 Route::get('/category/restore/{id}', [CategoryController::class, 'restoreCategory'])->name('restore.category');
 Route::get('/category/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('delete.category');
+Route::get('/brand/all', [BrandController::class, 'allBrands'])->name('brands');
+Route::post('/brand/add', [BrandController::class, 'storeBrand'])->name('store.brand');
