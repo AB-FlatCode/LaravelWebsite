@@ -39,8 +39,8 @@
                   <td><img src="{{ asset($brand->brand_img) }}" alt="" style="width:120px" height="auto"></td>
                   <td>{{ $brand->created_at }}</td>           
                   <td>
-                    <a class="btn btn-info" href="#">Edit</a>
-                    <a class="btn btn-danger" href="#">Delete</a>
+                    <a class="btn btn-info" href="{{ route('edit.brand', $brand->id) }}">Edit</a>
+                    <a class="btn btn-danger" href="{{ route('delete.brand', $brand->id) }}" onclick="return confirm('Are you sure to delete?')">Delete</a>
                   </td>
                 </tr> 
                 @endforeach               

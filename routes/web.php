@@ -35,3 +35,6 @@ Route::get('/category/restore/{id}', [CategoryController::class, 'restoreCategor
 Route::get('/category/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('delete.category');
 Route::get('/brand/all', [BrandController::class, 'allBrands'])->name('brands');
 Route::post('/brand/add', [BrandController::class, 'storeBrand'])->name('store.brand');
+Route::get('/brand/{id}/edit', [BrandController::class, 'editBrand'])->name('edit.brand');
+Route::put('/brand/{id}', [BrandController::class, 'updateBrand'])->name('update.brand');
+Route::get('/brand/{id}', [BrandController::class, 'deleteBrand'])->name('delete.brand');
